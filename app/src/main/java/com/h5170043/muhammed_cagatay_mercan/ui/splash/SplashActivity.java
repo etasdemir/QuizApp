@@ -1,13 +1,13 @@
 package com.h5170043.muhammed_cagatay_mercan.ui.splash;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 
 import com.h5170043.muhammed_cagatay_mercan.R;
 import com.h5170043.muhammed_cagatay_mercan.ui.login.LoginActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

@@ -1,16 +1,15 @@
 package com.h5170043.muhammed_cagatay_mercan.ui.login;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.h5170043.muhammed_cagatay_mercan.R;
 import com.h5170043.muhammed_cagatay_mercan.ui.category.CategoryActivity;
 import com.h5170043.muhammed_cagatay_mercan.utils.AppPreferences;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
 

@@ -6,4 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".ui.won.GameWonActivity">
 
+    <TextView
+        android:id="@+id/txt_game_won_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/game_won"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_game_won_question_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0/0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_game_won_static_question_num"
+        app:layout_constraintTop_toTopOf="@+id/txt_game_won_static_question_num" />
+
+    <TextView
+        android:id="@+id/txt_game_won_static_question_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/game_question"
+        app:layout_constraintEnd_toStartOf="@+id/txt_game_won_question_num"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_game_won_title" />
+
+    <TextView
+        android:id="@+id/txt_game_won_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_game_won_static_score"
+        app:layout_constraintTop_toTopOf="@+id/txt_game_won_static_score" />
+
+    <TextView
+        android:id="@+id/txt_game_won_static_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/game_score"
+        app:layout_constraintEnd_toStartOf="@+id/txt_game_won_score"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_game_won_static_question_num" />
+
+    <Button
+        android:id="@+id/btn_game_won_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/return_to_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_game_won_static_score" />
+
+    <Button
+        android:id="@+id/btn_game_won_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_game_won_return" />
 </androidx.constraintlayout.widget.ConstraintLayout>

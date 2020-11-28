@@ -2,7 +2,8 @@
     <string name="app_name">H5170043_MuhammedCagatayMercan</string>
 
     <string name="exit">Çıkış</string>
-
+    <string name="return_to_category">Anasayfaya Dön</string>
+    
     // LoginActivity
     <string name="login_name">Oyuncu Adı:</string>
     <string name="login_next">İleri</string>
@@ -26,5 +27,10 @@
     <string name="game_dialog_exit">Çıkış</string>
     <string name="game_dialog_continue">Devam</string>
 
-
+    // GameLostActivity
+    <string name="game_lost_finished">Oyun Bitti</string>
+    
+    // GameWin
+    <string name="game_won">Tebrikler</string>
+    
 </resources>

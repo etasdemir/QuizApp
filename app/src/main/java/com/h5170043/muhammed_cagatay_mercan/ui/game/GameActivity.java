@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.h5170043.muhammed_cagatay_mercan.R;
 import com.h5170043.muhammed_cagatay_mercan.model.Question;
 import com.h5170043.muhammed_cagatay_mercan.ui.category.CategoryActivity;
+import com.h5170043.muhammed_cagatay_mercan.ui.lost.GameLostActivity;
 import com.h5170043.muhammed_cagatay_mercan.ui.won.GameWonActivity;
 import com.h5170043.muhammed_cagatay_mercan.utils.Category;
 import com.h5170043.muhammed_cagatay_mercan.utils.Constants;
@@ -119,7 +120,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void navigateToGameLostActivity(){
-        Intent intent = new Intent(this, GameWonActivity.class);
+        Intent intent = new Intent(this, GameLostActivity.class);
         intent.putExtra(Constants.gameCurrentQuestionKey, currentQuestionNum);
         intent.putExtra(Constants.gameTotalQuestionKey, totalQuestion);
         intent.putExtra(Constants.gameScoreKey, score);

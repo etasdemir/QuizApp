@@ -1,10 +1,21 @@
 <resources>
     <string name="app_name">H5170043_MuhammedCagatayMercan</string>
 
-    // Login Activity
+    <string name="exit">Çıkış</string>
+
+    // LoginActivity
     <string name="login_name">Oyuncu Adı:</string>
     <string name="login_next">İleri</string>
     <string name="login_empty_name">Oyuncu</string>
 
+    // CategoryActivity
+    <string name="category_welcome">Hoşgeldin,</string>
+    <string name="category_tech">Teknoloji</string>
+    <string name="category_science">Bilim</string>
+
+    <string name="category_alert_title">Çıkış?</string>
+    <string name="category_alert_message">Uygulamadan Çıkılsın Mı?</string>
+    <string name="category_alert_yes">Evet</string>
+    <string name="category_alert_no">Hayır</string>
 
 </resources>

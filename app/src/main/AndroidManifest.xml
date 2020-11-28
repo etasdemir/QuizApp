@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_circle"
         android:supportsRtl="true"
         android:theme="@style/Theme.H5170043_MuhammedCagatayMercan">
-        <activity android:name=".ui.login.LoginActivity"></activity>
+        <activity android:name=".ui.category.CategoryActivity"></activity>
+        <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

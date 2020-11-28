@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">H5170043_MuhammedCagatayMercan</string>
+
+    // Login Activity
+    <string name="login_name">Oyuncu Adı:</string>
+    <string name="login_next">İleri</string>
+    <string name="login_empty_name">Oyuncu</string>
+
+
 </resources>

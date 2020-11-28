@@ -17,10 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class CategoryActivity extends AppCompatActivity {
 
-    TextView txt_category_name;
-    Button btn_category_tech;
-    Button btn_category_science;
-    Button btn_exit;
+    private TextView txt_category_name;
+    private Button btn_category_tech;
+    private Button btn_category_science;
+    private Button btn_exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,16 +65,16 @@ public class CategoryActivity extends AppCompatActivity {
 
     private void createExitAlertDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(R.string.category_alert_message)
+        builder.setMessage(R.string.category_dialog_message)
                 .setCancelable(false)
-                .setPositiveButton(R.string.category_alert_yes, (dialogInterface, i) -> {
+                .setPositiveButton(R.string.category_dialog_yes, (dialogInterface, i) -> {
                     finish();
                 })
-                .setNegativeButton(R.string.category_alert_no, (dialogInterface, i) -> {
+                .setNegativeButton(R.string.category_dialog_no, (dialogInterface, i) -> {
                     dialogInterface.dismiss();
                 });
         AlertDialog dialog = builder.create();
-        dialog.setTitle(R.string.category_alert_title);
+        dialog.setTitle(R.string.category_dialog_title);
         dialog.show();
     }
 

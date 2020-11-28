@@ -5,10 +5,14 @@ public class Question {
     private String answer;
     private String[] choices;
 
-    Question(String question, String answer, String[] choices){
+    public Question(String question, String answer, String[] choices){
         this.question = question;
         this.answer = answer;
         this.choices = choices;
+    }
+
+    public Question(){
+
     }
 
     public String getQuestion() {

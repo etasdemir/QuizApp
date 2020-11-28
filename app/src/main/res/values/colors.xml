@@ -10,4 +10,7 @@
 
     <color name="primaryColor">#EACEB4</color>
     <color name="secondaryColor">#BB5A5A</color>
+
+    <color name="red">#fc0303</color>
+    <color name="green">#03fc2c</color>
 </resources>

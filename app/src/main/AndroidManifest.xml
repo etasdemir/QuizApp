@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_circle"
         android:supportsRtl="true"
         android:theme="@style/Theme.H5170043_MuhammedCagatayMercan">
-        <activity android:name=".ui.game.GameActivity"></activity>
+        <activity android:name=".ui.lost.GameLostActivity"></activity>
+        <activity android:name=".ui.won.GameWonActivity" />
+        <activity android:name=".ui.game.GameActivity" />
         <activity android:name=".ui.category.CategoryActivity" />
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".ui.splash.SplashActivity">

@@ -14,8 +14,8 @@ import com.h5170043.muhammed_cagatay_mercan.utils.AppPreferences;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button btn_next;
-    EditText txt_login_name;
+    private Button btn_next;
+    private EditText txt_login_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

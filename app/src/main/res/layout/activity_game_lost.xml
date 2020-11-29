@@ -8,21 +8,22 @@
 
     <TextView
         android:id="@+id/txt_game_lost_title"
+        style="@style/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
         android:text="@string/game_lost_finished"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/img_game_lost" />
 
     <TextView
         android:id="@+id/txt_game_lost_static_question_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/margin_extra_large"
         android:text="@string/game_question"
         app:layout_constraintEnd_toStartOf="@+id/txt_game_lost_question_num"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_game_lost_title" />
@@ -31,10 +32,9 @@
         android:id="@+id/txt_game_lost_static_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/margin_normal"
         android:text="@string/game_score"
         app:layout_constraintEnd_toStartOf="@+id/txt_game_lost_score"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_game_lost_static_question_num" />
@@ -43,7 +43,7 @@
         android:id="@+id/btn_game_lost_return"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/margin_extra_large"
         android:text="@string/return_to_category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
         android:id="@+id/btn_game_lost_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/margin_normal"
         android:text="@string/exit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,9 +63,9 @@
         android:id="@+id/txt_game_lost_question_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/margin_small"
+        tools:text="2/10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txt_game_lost_static_question_num"
         app:layout_constraintTop_toTopOf="@+id/txt_game_lost_static_question_num" />
 
@@ -73,9 +73,19 @@
         android:id="@+id/txt_game_lost_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/margin_small"
+        tools:text="200"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txt_game_lost_static_score"
         app:layout_constraintTop_toTopOf="@+id/txt_game_lost_static_score" />
+
+    <ImageView
+        android:id="@+id/img_game_lost"
+        android:layout_width="@dimen/emoji_size"
+        android:layout_height="@dimen/emoji_size"
+        android:layout_marginTop="@dimen/margin_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_sad_emoji" />
 </androidx.constraintlayout.widget.ConstraintLayout>

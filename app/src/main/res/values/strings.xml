@@ -20,8 +20,8 @@
     <string name="category_dialog_no">Hayır</string>
 
     // GameActivity
-    <string name="game_question">Soru: </string>
-    <string name="game_score">Puan: </string>
+    <string name="game_question">Soru:&#160;</string>
+    <string name="game_score">Puan:&#160;</string>
 
     <string name="game_dialog_title">Cevap Doğru</string>
     <string name="game_dialog_exit">Çıkış</string>

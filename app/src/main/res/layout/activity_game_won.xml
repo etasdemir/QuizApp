@@ -8,32 +8,32 @@
 
     <TextView
         android:id="@+id/txt_game_won_title"
+        style="@style/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/margin_normal"
         android:text="@string/game_won"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/txt_game_won_question_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="0/0"
+        android:layout_marginStart="@dimen/margin_small"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txt_game_won_static_question_num"
-        app:layout_constraintTop_toTopOf="@+id/txt_game_won_static_question_num" />
+        app:layout_constraintTop_toTopOf="@+id/txt_game_won_static_question_num"
+        tools:text="0/0" />
 
     <TextView
         android:id="@+id/txt_game_won_static_question_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/margin_extra_large"
         android:text="@string/game_question"
         app:layout_constraintEnd_toStartOf="@+id/txt_game_won_question_num"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_game_won_title" />
@@ -42,20 +42,19 @@
         android:id="@+id/txt_game_won_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="0"
+        android:layout_marginStart="@dimen/margin_small"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txt_game_won_static_score"
-        app:layout_constraintTop_toTopOf="@+id/txt_game_won_static_score" />
+        app:layout_constraintTop_toTopOf="@+id/txt_game_won_static_score"
+        tools:text="0" />
 
     <TextView
         android:id="@+id/txt_game_won_static_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/margin_normal"
         android:text="@string/game_score"
         app:layout_constraintEnd_toStartOf="@+id/txt_game_won_score"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_game_won_static_question_num" />
@@ -64,7 +63,7 @@
         android:id="@+id/btn_game_won_return"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/margin_extra_large"
         android:text="@string/return_to_category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,9 +73,21 @@
         android:id="@+id/btn_game_won_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/margin_normal"
         android:text="@string/exit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_game_won_return" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/emoji_size"
+        android:layout_height="@dimen/emoji_size"
+        android:layout_marginTop="@dimen/margin_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_happy_emoji" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

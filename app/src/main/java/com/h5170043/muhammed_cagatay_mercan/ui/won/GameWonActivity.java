@@ -13,10 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class GameWonActivity extends AppCompatActivity {
 
-    TextView txt_score;
-    TextView txt_question_num;
-    Button btn_return;
-    Button btn_exit;
+    private TextView txt_score;
+    private TextView txt_question_num;
+    private Button btn_return;
+    private Button btn_exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +30,6 @@ public class GameWonActivity extends AppCompatActivity {
         btn_exit.setOnClickListener(view -> finish());
     }
 
-    private void navigateToCategory() {
-        Intent intent = new Intent(this, CategoryActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
     private void getArgs() {
         Intent intent = getIntent();
         int score = intent.getIntExtra(Constants.gameScoreKey, 0);
@@ -47,6 +41,12 @@ public class GameWonActivity extends AppCompatActivity {
         String questionNumber = totalQuestion + "/" + totalQuestion;
         txt_score.setText(String.valueOf(score));
         txt_question_num.setText(questionNumber);
+    }
+
+    private void navigateToCategory() {
+        Intent intent = new Intent(this, CategoryActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     private void initViews() {

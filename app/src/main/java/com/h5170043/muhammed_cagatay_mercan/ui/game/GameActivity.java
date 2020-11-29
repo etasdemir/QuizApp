@@ -52,6 +52,14 @@ public class GameActivity extends AppCompatActivity {
         category = ((Category) intent.getSerializableExtra(Constants.categoryNameKey));
     }
 
+    private void setCategoryTitle() {
+        if (category == Category.Science) {
+            txt_category.setText(getString(R.string.category_science));
+        } else {
+            txt_category.setText(getString(R.string.category_tech));
+        }
+    }
+
     private void getTotalQuestionNumber() {
         totalQuestion = QuestionGenerator.getTotalQuestionNumber(category);
     }
@@ -73,10 +81,10 @@ public class GameActivity extends AppCompatActivity {
 
     private void handleClickEvents(String answer) {
         Button correctButton = getCorrectButton(answer);
-        btn_first.setOnClickListener(button -> handleButton((Button) button, correctButton));
-        btn_second.setOnClickListener(button -> handleButton((Button) button, correctButton));
-        btn_third.setOnClickListener(button -> handleButton((Button) button, correctButton));
-        btn_last.setOnClickListener(button -> handleButton((Button) button, correctButton));
+        btn_first.setOnClickListener(button -> handleButtonClick((Button) button, correctButton));
+        btn_second.setOnClickListener(button -> handleButtonClick((Button) button, correctButton));
+        btn_third.setOnClickListener(button -> handleButtonClick((Button) button, correctButton));
+        btn_last.setOnClickListener(button -> handleButtonClick((Button) button, correctButton));
     }
 
     private Button getCorrectButton(String answer){
@@ -95,7 +103,7 @@ public class GameActivity extends AppCompatActivity {
         return button.getText().equals(answer);
     }
 
-    private void handleButton(Button button, Button correctButton) {
+    private void handleButtonClick(Button button, Button correctButton) {
         button.setBackgroundColor(getResources().getColor(R.color.red));
         correctButton.setBackgroundColor(getResources().getColor(R.color.green));
 
@@ -138,6 +146,14 @@ public class GameActivity extends AppCompatActivity {
         currentQuestionNum++;
     }
 
+    private void navigateToGameWonActivity() {
+        Intent intent = new Intent(this, GameWonActivity.class);
+        intent.putExtra(Constants.gameTotalQuestionKey, totalQuestion);
+        intent.putExtra(Constants.gameScoreKey, score);
+        startActivity(intent);
+        finish();
+    }
+
     private void createCorrectAnswerDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false)
@@ -153,10 +169,8 @@ public class GameActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    private void navigateToGameWonActivity() {
-        Intent intent = new Intent(this, GameWonActivity.class);
-        intent.putExtra(Constants.gameTotalQuestionKey, totalQuestion);
-        intent.putExtra(Constants.gameScoreKey, score);
+    private void navigateToCategoryActivity() {
+        Intent intent = new Intent(this, CategoryActivity.class);
         startActivity(intent);
         finish();
     }
@@ -165,24 +179,10 @@ public class GameActivity extends AppCompatActivity {
         txt_score.setText(String.valueOf(score));
         String questionNum = currentQuestionNum + "/" + totalQuestion;
         txt_question_number.setText(questionNum);
-        btn_first.setBackgroundColor(getResources().getColor(R.color.primaryColor));
-        btn_second.setBackgroundColor(getResources().getColor(R.color.primaryColor));
-        btn_third.setBackgroundColor(getResources().getColor(R.color.primaryColor));
-        btn_last.setBackgroundColor(getResources().getColor(R.color.primaryColor));
-    }
-
-    private void navigateToCategoryActivity() {
-        Intent intent = new Intent(this, CategoryActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    private void setCategoryTitle() {
-        if (category == Category.Science) {
-            txt_category.setText(getString(R.string.category_science));
-        } else {
-            txt_category.setText(getString(R.string.category_tech));
-        }
+        btn_first.setBackgroundColor(getResources().getColor(R.color.buttonColor));
+        btn_second.setBackgroundColor(getResources().getColor(R.color.buttonColor));
+        btn_third.setBackgroundColor(getResources().getColor(R.color.buttonColor));
+        btn_last.setBackgroundColor(getResources().getColor(R.color.buttonColor));
     }
 
     private void initViews() {

@@ -13,10 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class GameLostActivity extends AppCompatActivity {
 
-    TextView txt_question_num;
-    TextView txt_score;
-    Button btn_return;
-    Button btn_exit;
+    private TextView txt_question_num;
+    private TextView txt_score;
+    private Button btn_return;
+    private Button btn_exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
